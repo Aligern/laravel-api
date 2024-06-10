@@ -2,7 +2,7 @@
 @section('content')
     <section class="container">
         @guest
-        <h1>Benvenuto.</h1>
+        <h1>Benvenuto,</h1>
         <div class="container text-white">
             <p>Effettua il Login o Registrati per continuare.</p>
         </div>
@@ -15,7 +15,7 @@
         @endguest
         @if (Auth::check())
         <div class="container text-white">
-            <h1>Benvenuto {{ Auth::user()->name }}.</h1>
+            <h1>Bentornato {{ Auth::user()->name }}</h1>
             <a href="{{ url('admin') }}" class="btn text-white ls-glass-badge mb-3">Dashboard</a>
             <a href="{{ route('admin.projects.index') }}" class="btn text-white ls-glass-badge mb-3">Projects</a>
             <a href="{{ route('admin.technologies.index') }}" class="btn text-white ls-glass-badge mb-3">Technologies</a>
