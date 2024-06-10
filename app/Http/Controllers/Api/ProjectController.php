@@ -19,9 +19,17 @@ class ProjectController extends Controller
 
     public function show($id) {
         $project = Project::where('id', $id)->with('type', 'technologies')->first();
-        return response()->json([
-            'success' => true,
-            'results' => $project
-        ]);
+        if ($project) {
+            return response()->json([
+                'success' => true,
+                'results' => $project
+            ]);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'Project not found'
+            ]);
+        }
+        
     }
 }
