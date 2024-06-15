@@ -1,6 +1,9 @@
 <nav id='sidebar'>
     <a href="/" class="nav-link text-light">
-        <h2 class="p-2"><i class="fa-solid fa-folder-open pe-2"></i>Boolfolio</h2>
+        <h2 class="p-2">
+          <a href="http://localhost:5173">
+            <i class="fa-solid fa-folder-open pe-2"></i>Boolfolio</h2>
+          </a>
     </a>
     <ul class="nav flex-column">
         <li class="nav-item">
